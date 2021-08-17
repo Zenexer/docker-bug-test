@@ -1,4 +1,4 @@
-name: "broken2"
+name: "working2"
 
 on:
   push:
@@ -25,6 +25,6 @@ jobs:
         if: "github.event_name != 'pull_request'"
         run: |
           docker buildx build \
-            --tag ghcr.io/zenexer/docker-bug-test:broken2 \
+            --tag ghcr.io/zenexer/docker-bug-test:working2 \
             --push \
             .
