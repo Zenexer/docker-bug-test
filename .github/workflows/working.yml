@@ -2,8 +2,8 @@ name: "working"
 
 on:
   push:
-    branches:
-      - "main"
+    tags:
+      - "working"
 
 jobs:
   push:
