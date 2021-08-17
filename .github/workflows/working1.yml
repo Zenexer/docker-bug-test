@@ -3,7 +3,7 @@ name: "working1"
 on:
   push:
     tags:
-      - "test1"
+      - "test1-*"
 
 jobs:
   push:
@@ -20,6 +20,7 @@ jobs:
           registry: "ghcr.io"
           username: "${{ github.actor }}"
           password: "${{ secrets.GITHUB_TOKEN }}"
+          logout: false
 
       - name: "build1"
         uses: "docker/build-push-action@v2"

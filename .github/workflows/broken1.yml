@@ -3,7 +3,7 @@ name: "broken1"
 on:
   push:
     tags:
-      - "test1"
+      - "test1-*"
 
 jobs:
   push:
