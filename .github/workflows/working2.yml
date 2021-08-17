@@ -8,6 +8,8 @@ on:
 jobs:
   push:
     runs-on: "ubuntu-latest"
+    env:
+      TEST_IMAGE_NAME: ghcr.io/zenexer/docker-bug-test:working2
 
     steps:
       - uses: "actions/checkout@v2"
@@ -25,6 +27,7 @@ jobs:
         if: "github.event_name != 'pull_request'"
         run: |
           docker buildx build \
-            --tag ghcr.io/zenexer/docker-bug-test:working2 \
+            --build-arg SOMETHING=something \
+            --tag ${TEST_IMAGE_NAME} \
             --push \
             .
