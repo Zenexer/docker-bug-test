@@ -27,4 +27,4 @@ jobs:
           context: "."
           platforms: "linux/amd64,linux/arm64"
           push: ${{ github.event_name != 'pull_request' }}
-          tags: "ghcr.io/Zenexer/docker-bug-test:broken"
+          tags: "ghcr.io/zenexer/docker-bug-test:broken"

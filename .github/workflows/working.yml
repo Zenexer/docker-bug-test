@@ -27,7 +27,7 @@ jobs:
           context: "."
           platforms: "linux/amd64"
           push: ${{ github.event_name != 'pull_request' }}
-          tags: "ghcr.io/Zenexer/docker-bug-test:working"
+          tags: "ghcr.io/zenexer/docker-bug-test:working"
 
       - name: "build2"
         uses: "docker/build-push-action@v2"
@@ -35,4 +35,4 @@ jobs:
           context: "."
           platforms: "linux/arm64"
           push: ${{ github.event_name != 'pull_request' }}
-          tags: "ghcr.io/Zenexer/docker-bug-test:working"
+          tags: "ghcr.io/zenexer/docker-bug-test:working"
