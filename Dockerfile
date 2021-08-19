@@ -1,3 +1,3 @@
-FROM debian:bullseye-20210818-slim
+FROM debian:bullseye-20210816-slim
 
 ENTRYPOINT ["/bin/sh"]
