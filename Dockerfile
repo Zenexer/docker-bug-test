@@ -1,2 +1,3 @@
-FROM scratch
-COPY Dockerfile /
+FROM debian:slim
+
+ENTRYPOINT ["/bin/sh"]
